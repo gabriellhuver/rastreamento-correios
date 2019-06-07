@@ -23,7 +23,7 @@ Instalação:
 
 ## Rastreando objetos
 
-Explain what these tests test and why
+Rastreamento de objeto
 
 ```
 const correios = require('correios-rastreamento')
