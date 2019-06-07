@@ -3,14 +3,14 @@ var soap = require('soap');
 
 const url = 'http://webservice.correios.com.br/service/rastro/Rastro.wsdl';
 
-exports.buscarObjectos = function (objectos) {
+exports.buscarObjectos = function (objeto) {
     return new Promise((resolve, reject) => {
         var args = {
             usuario: 'ECT',
             senha: 'SRO',
             tipo: 'L',
             lingua: 101,
-            objetos: objectos
+            objetos: objeto
         };
         try {
             soap.createClient(url, function (err, client) {
