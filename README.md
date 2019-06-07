@@ -42,7 +42,7 @@ correios.sro.buscarObjectos(["PR123123123BR"]).then(result => {
 
 ## Authors
 
-* **Gabriell Huver** - *all* - [PurpleBooth](https://github.com/gabriellhuver)
+* **Gabriell Huver** - *all* - [gabriellhuver](https://github.com/gabriellhuver)
 
 * Please give me a job ! xD
 
