@@ -28,7 +28,7 @@ Rastreamento de objeto
 ```
 const correios = require('correios-rastreamento')
 
-correios.sro.buscarObjectos(["PR123123123BR"]).then(result => {
+correios.sro.buscarObjeto("BR1242141BR").then(result => {
     console.log(result)
 })
 ```

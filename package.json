@@ -1,6 +1,6 @@
 {
   "name": "correios-rastreamento",
-  "version": "2.1.0",
+  "version": "0.0.1",
   "description": "Pacote de rastreamento de objectos através api SOAP do correios ",
   "main": "index.js",
   "scripts": {
