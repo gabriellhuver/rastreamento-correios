@@ -6,6 +6,7 @@ Rastreamento de objetos correios.com.br
 
 Aplicativo faz um request no serviço SOAP de reastreamento dos correios e retorna os rastreios em um objeto JSON
 
+* NPM Package https://www.npmjs.com/package/correios-rastreamento
 ### Pre-requisitos e Instalação
 
 Node.js
