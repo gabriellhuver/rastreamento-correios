@@ -1,0 +1,14 @@
+{
+  "name": "correios-rastro",
+  "version": "1.0.0",
+  "description": "Pacote de rastreamento de objectos através api SOAP do correios ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Gabriell Huver <gabriell.is.huver@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "soap": "^0.27.1"
+  }
+}

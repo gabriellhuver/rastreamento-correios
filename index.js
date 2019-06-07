@@ -1,0 +1,1 @@
+exports.sro = require('./util/sro-correios');
