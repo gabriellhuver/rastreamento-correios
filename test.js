@@ -1,7 +1,5 @@
 const correios = require('./index');
 
-
-
 async function main() {
     try {
         let result = await correios.sro.buscarObjectos(["teste"])
