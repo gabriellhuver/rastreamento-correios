@@ -1,15 +1,18 @@
 {
   "name": "correios-rastreamento",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Pacote de rastreamento de objectos através api SOAP do correios ",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
-  "git": "https://github.com/gabriellhuver/rastreamento-correios",
-  "author": "Gabriell Huver <gabriell.is.huver@gmail.com>",
+  "git": "",
   "license": "ISC",
   "dependencies": {
     "soap": "^0.27.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabriellhuver/rastreamento-correios"
   }
 }

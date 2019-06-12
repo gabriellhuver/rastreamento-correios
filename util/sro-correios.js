@@ -1,7 +1,7 @@
 'use strict'
 var soap = require('soap');
 
-const url = 'http://webservice.correios.com.br/service/rastro/Rastro.wsdl';
+const url = 'https://webservice.correios.com.br/service/rastro/Rastro.wsdl';
 
 exports.buscarObjeto = function (objeto) {
     return new Promise((resolve, reject) => {
@@ -9,13 +9,14 @@ exports.buscarObjeto = function (objeto) {
             usuario: 'ECT',
             senha: 'SRO',
             tipo: 'L',
+            resultado: 'T',
             lingua: 101,
             objetos: objeto
         };
         try {
             soap.createClient(url, function (err, client) {
                 if (err) reject(err)
-                client.buscaEventos(args, function (err, result) {
+                client.buscaEventosLista(args, function (err, result) {
                     if (err) reject(err)
                     resolve(result.return)
                 });
