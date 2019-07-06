@@ -1,7 +1,7 @@
-const correios = require('../index')
+const correios = require('../../index')
 async function main() {
-    let j = await correios.sro.rastrearObjecto("PU505780823BR")
-    console.log(j)
+    let testObjectID = await correios.sro.rastrearObjecto("PU9999999BR")
+    console.log(testObjectID)
 }
 
 main()

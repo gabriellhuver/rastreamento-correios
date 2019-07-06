@@ -25,7 +25,11 @@ exports.rastrearObjecto = function (code) {
                         destino: destino
                     })
                 }
-                resolve(ret.reverse())
+                if (ret.length == 0) {
+                    resolve('Product not found!')
+                } else {
+                    resolve(ret.reverse())
+                }
             })
         } catch (error) {
             reject(error)
