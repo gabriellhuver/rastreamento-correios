@@ -1,6 +1,6 @@
 {
   "name": "correios-rastreamento",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Pacote de rastreamento de objectos através de webscrap ",
   "main": "index.js",
   "scripts": {
