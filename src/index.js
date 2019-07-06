@@ -1,1 +1,1 @@
-exports.sro = require('./util/scrapper');
+exports.sro = require('./src/util/scrapper');
