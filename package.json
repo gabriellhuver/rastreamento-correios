@@ -1,11 +1,10 @@
 {
   "name": "correios-rastreamento",
-  "version": "0.0.7",
-  "description": "Pacote de rastreamento de objectos através api SOAP do correios ",
+  "version": "1.0.0",
+  "description": "Pacote de rastreamento de objectos através de webscrap ",
   "main": "index.js",
   "scripts": {
-    "test": "node src/test/test.js",
-    "start": "node index.js"
+    "test": "node src/test/test.js"
   },
   "git": "",
   "license": "ISC",
