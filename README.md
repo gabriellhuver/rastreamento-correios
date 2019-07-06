@@ -4,7 +4,7 @@ Rastreamento de objetos correios.com.br
 
 ## Biblioteca de rastreamento de objetos
 
-Aplicativo faz um request no serviço SOAP de reastreamento dos correios e retorna os rastreios em um objeto JSON
+Aplicativo faz um web scrap na pagina de correios e pega os dados da consulta
 
 * NPM Package https://www.npmjs.com/package/correios-rastreamento
 ### Pre-requisitos e Instalação
