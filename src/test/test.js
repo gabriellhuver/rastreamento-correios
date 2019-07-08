@@ -1,12 +1,17 @@
 const correios = require('../../index')
-async function main() {
-    try {
-        let testObjectID = await correios.sro.rastrearObjecto("PU9999999BR")
-        console.log('Test Success!')
+const test = require('tape')
 
-    } catch (error) {
-        console.log("Pass failed")
+test('Teste do serviço', async (t) => {
+    t.assert(await find(), "Serviço Ok")
+    t.end()
+})
+
+async function find() {
+    var ret = await correios.sro.rastrearObjecto("PU505780823BR")
+    if (ret === 'Product not found!') {
+        return true
+    } else {
+        console.log(ret)
+        return true
     }
 }
-
-main()
