@@ -1,16 +1,18 @@
 {
   "name": "correios-rastreamento",
-  "version": "0.1.0",
-  "description": "Pacote de rastreamento de objectos através de webscrap ",
+  "version": "0.2.1",
+  "description": "Pacote de rastreamento de objectos através de webscrap e request do novo sistema de correios https://www.linkcorreios.com.br",
   "main": "index.js",
   "scripts": {
     "test": "node src/test/test.js"
   },
-  "git": "",
+  "git": "https://github.com/gabriellhuver/rastreamento-correios",
   "license": "ISC",
+  "keywords": ["correios", "novo sistema", "rastreamento", "web scrap"],
+  "author": "",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "tabletojson": "^1.0.4"
+    "req-fast": "^0.2.18"
   },
   "repository": {
     "type": "git",
