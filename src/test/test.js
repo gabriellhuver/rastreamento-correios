@@ -7,7 +7,7 @@ test('Teste do serviço', async (t) => {
 })
 
 async function find() {
-    var ret = await correios.sro.rastrearObjecto("PU505780823BR")
+    var ret = await correios.sro.rastrearObjecto("PU505780824BR")
     if (ret === 'Product not found!') {
         return true
     } else {
