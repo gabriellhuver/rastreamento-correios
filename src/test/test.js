@@ -1,13 +1,14 @@
 const correios = require('../../index')
 const test = require('tape')
 
-test('Teste do serviço', async (t) => {
-    t.assert(await find(), "Serviço Ok")
-    t.end()
-})
+find()
 
 async function find() {
-    var ret = await correios.sro.rastrearObjecto("PU505780824BR")
+    try {
+        var ret = await correios.sro.rastrearObjeto("PU505780823BR")
+    } catch (error) {
+        console.log(error)
+    }
     if (ret === 'Product not found!') {
         return true
     } else {

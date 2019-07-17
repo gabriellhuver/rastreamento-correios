@@ -33,13 +33,17 @@ function wrapData(html, strs, ret) {
         let status = strs[index + 1];
         let origem = strs[index + 2];
         let destino = strs[index + 3];
-        if (status.includes('Objeto postado'))
-            destino = "Não existe destino de origem";
-        ret.push({
-            data: data,
-            status: status,
-            origem: origem,
-            destino: destino
-        });
+        try {
+            if (status.includes('Objeto postado'))
+                destino = "Não existe destino de origem";
+            ret.push({
+                data: data,
+                status: status,
+                origem: origem,
+                destino: destino
+            });
+        } catch (error) {
+            console.log('Error')
+        }
     }
 }
