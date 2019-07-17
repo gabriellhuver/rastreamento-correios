@@ -5,7 +5,7 @@ find()
 
 async function find() {
     try {
-        var ret = await correios.sro.rastrearObjeto("PU505780823BR")
+        var ret = await correios.sro.rastrearObjeto("PU11111111111BR")
     } catch (error) {
         console.log(error)
     }
