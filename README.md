@@ -28,7 +28,7 @@ Rastreamento de objeto
 ```
 const correios = require('correios-rastreamento')
 
-correios.sro.rastrearObjecto('PU9999999BR').then(function(res){
+correios.sro.rastrearObjeto('PU9999999BR').then(function(res){
     console.log(res)
 })
 
@@ -42,5 +42,4 @@ correios.sro.rastrearObjecto('PU9999999BR').then(function(res){
 
 * **Gabriell Huver** - *all* - [gabriellhuver](https://github.com/gabriellhuver)
 
-## Please give me a job ! xD
 

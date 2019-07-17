@@ -3,7 +3,7 @@ const cheerio = require('cheerio')
 const uri = "https://www.linkcorreios.com.br/"
 
 
-exports.rastrearObjecto = function (code) {
+exports.rastrearObjeto = function (code) {
     return new Promise((resolve, reject) => {
         try {
             request(uri + code, function (error, response, body) {
