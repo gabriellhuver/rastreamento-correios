@@ -1,0 +1,4 @@
+install:
+  - npm install
+script:
+  - node ./src/test.js
