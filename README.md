@@ -2,7 +2,7 @@
 
 Rastreamento de objetos correios.com.br
 
-![](https://travis-ci.org/gabriellhuver/rastreamento-correios.svg?branch=master) ![]
+![](https://travis-ci.org/gabriellhuver/rastreamento-correios.svg?branch=master)
 
 ## Biblioteca de rastreamento de objetos
 
