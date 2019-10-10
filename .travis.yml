@@ -2,4 +2,4 @@ language: node_js
 install:
   - npm install
 script:
-  - node ./src/test.js
+  - node ./src/test/test.js
