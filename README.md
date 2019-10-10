@@ -2,6 +2,8 @@
 
 Rastreamento de objetos correios.com.br
 
+![](https://travis-ci.org/gabriellhuver/rastreamento-correios.svg?branch=master) ![]
+
 ## Biblioteca de rastreamento de objetos
 
 Aplicativo faz um web scrap na pagina de correios e pega os dados da consulta
