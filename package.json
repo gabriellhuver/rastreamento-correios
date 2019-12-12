@@ -1,6 +1,6 @@
 {
   "name": "correios-rastreamento",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Pacote de rastreamento de objetos através de webscrap e request do novo sistema de correios https://www.linkcorreios.com.br",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gabriellhuver/rastreamento-correios"
+  },
+  "devDependencies": {
+    "tape": "^4.11.0"
   }
 }

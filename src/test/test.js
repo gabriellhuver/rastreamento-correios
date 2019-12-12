@@ -1,12 +1,13 @@
 const correios = require('../../index')
+const test = require('tape')
 
-find()
 
-async function find() {
-    try {
-        var ret = await correios.sro.rastrearObjeto("CODIGO")
-        if(ret) console.log('Build pass!')
-    } catch (error) {
-        console.log(error)
-    }
-} 
+test('Find Product', async (t) => {
+    t.assert((await correios.sro.rastrearObjeto("test") !== null), "Find product OK")
+    t.end()
+})
+
+
+//correios.sro.rastrearObjeto('LO394359932CN').then(function(res){
+//    console.log(res)}
+//)

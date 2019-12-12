@@ -1,6 +1,6 @@
-# Correios rastreamento Nodejs
+# Correios rastreamento - NodeJS
 
-Rastreamento de objetos correios.com.br
+Interface de rastreamento de objetos correios.com.br
 
 ![](https://travis-ci.org/gabriellhuver/rastreamento-correios.svg?branch=master)
 
@@ -8,26 +8,19 @@ Rastreamento de objetos correios.com.br
 
 Aplicativo faz um web scrap na pagina de correios e pega os dados da consulta
 
-* NPM Package https://www.npmjs.com/package/correios-rastreamento
 ### Pre-requisitos e Instalação
 
-Node.js
-Npm
-Instalação:
+* [Noje JS]( https://nodejs.org/en/) - Node JS
 
 		npm i correios-rastreamento --save
 
 
-### Testando
-
-		npm run test
-
 
 ## Rastreando objetos
 
-Rastreamento de objeto
+Rastreando um objeto
 
-```
+```js
 const correios = require('correios-rastreamento')
 
 correios.sro.rastrearObjeto('PU9999999BR').then(function(res){
@@ -42,6 +35,6 @@ correios.sro.rastrearObjeto('PU9999999BR').then(function(res){
 
 ## Authors
 
-* **Gabriell Huver** - *all* - [gabriellhuver](https://github.com/gabriellhuver)
+* **Gabriell Huver** - [gabriellhuver](https://github.com/gabriellhuver)
 
 

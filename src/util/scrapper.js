@@ -8,7 +8,7 @@ exports.rastrearObjeto = function (code) {
         try {
             request(uri + code, function (error, response, body) {
                 if (error) reject('Invalid request!')
-                var html = cheerio.load(body)
+                const html = cheerio.load(body)
                 var strs = []
                 var ret = []
                 wrapData(html, strs, ret);
@@ -34,8 +34,9 @@ function wrapData(html, strs, ret) {
         let origem = strs[index + 2];
         let destino = strs[index + 3];
         try {
-            if (status.includes('Objeto postado'))
+            if (status.includes('Objeto postado')) {
                 destino = "Não existe destino de origem";
+            }
             ret.push({
                 data: data,
                 status: status,
@@ -43,7 +44,7 @@ function wrapData(html, strs, ret) {
                 destino: destino
             });
         } catch (error) {
-            console.log('Error')
+            return error
         }
     }
 }
