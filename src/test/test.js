@@ -8,6 +8,6 @@ test('Find Product', async (t) => {
 })
 
 
-//correios.sro.rastrearObjeto('LO394359932CN').then(function(res){
+//correios.sro.rastrearObjeto('qwdqwd').then(function(res){
 //    console.log(res)}
 //)
