@@ -1,19 +1,21 @@
 # Correios rastreamento - NodeJS
 
-Interface de rastreamento de objetos correios.com.br
+Modulo de rastreamento de objetos https://www.linkcorreios.com.br/
 
 ![](https://travis-ci.org/gabriellhuver/rastreamento-correios.svg?branch=master)
 
 ## Biblioteca de rastreamento de objetos
 
-Aplicativo faz um web scrap na pagina de correios e pega os dados da consulta
+O modulo faz uma simples requisição no novo sistema do [Correios](https://www.linkcorreios.com.br/) fazendo o web scrap dos dados de rastreamento, usa as dependencias [Cheerio](https://www.npmjs.com/package/cheerio) e [request](https://www.npmjs.com/package/request)
+
 
 ### Pre-requisitos e Instalação
 
 * [Noje JS]( https://nodejs.org/en/) - Node JS
 
-		npm i correios-rastreamento --save
-
+```shell
+		$ npm install correios-rastreamento --save
+```
 
 
 ## Rastreando objetos
