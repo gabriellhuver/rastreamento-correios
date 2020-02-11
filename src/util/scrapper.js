@@ -15,7 +15,9 @@ exports.rastrearObjeto = function (code) {
                 if (!ret.length) {
                     resolve('Product not found!')
                 } else {
-                    resolve(ret.reverse())
+                    ret = JSON.parse(JSON.stringify(ret.reverse()))
+                    ret.shift()
+                    resolve(ret)
                 }
             })
         } catch (error) {
@@ -25,25 +27,28 @@ exports.rastrearObjeto = function (code) {
 }
 
 function wrapData(html, strs, ret) {
-    html('td').each(function (index, elem) {
-        strs.push(html(elem).text());
+    html('.linha_status').each(function (index, elem) {
+        strs.push(elem);
     });
-    for (let index = 0; index < strs.length; index += 4) {
-        let data = strs[index];
-        let status = strs[index + 1];
-        let origem = strs[index + 2];
-        let destino = strs[index + 3];
-        try {
-            if (status.includes('Objeto postado'))
-                destino = "Não existe destino de origem";
-            ret.push({
-                data: data,
-                status: status,
-                origem: origem,
-                destino: destino
-            });
-        } catch (error) {
-            console.log('Error')
-        }
-    }
+    strs.forEach(element => {
+        let status, data, local, origem, destino
+        html(element).find('li').each(function (index, elem) {
+            let text = html(elem).text()
+            if (text && text.includes('Status')) { status = text }
+            if (text && text.includes('Data')) { data = text }
+            if (text && text.includes('Local')) { local = text }
+            if (text && text.includes('Origem')) { origem = text }
+            if (text && text.includes('Destino')) { destino = text }
+
+        })
+        ret.push({
+            status: status ? status : undefined,
+            data: data ? data : undefined,
+            local: local ? local : undefined,
+            origem: origem ? origem : undefined,
+            destino: destino ? destino : undefined
+        })
+    });
+
+
 }
