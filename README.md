@@ -30,6 +30,15 @@ correios.sro.rastrearObjeto('PU9999999BR').then(function(res){
 })
 
 ```
+Response Example
+```
+{ status_list:
+   [ { status:
+        'Status: Objeto recebido na unidade de exportação no país de origem',
+       data: 'Data  : 1/11/2000 | Hora: 12:12',
+       local: 'Local: SUECIA -  / ' },
+  status_code: 200 }
+```
 
 ## Built With
 
