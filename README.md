@@ -31,7 +31,7 @@ correios.sro.rastrearObjeto('PU9999999BR').then(function(res){
 
 ```
 Response Example
-```json
+```
 { status_list:
    [ { status:
         'Status: Objeto recebido na unidade de exportação no país de origem',
