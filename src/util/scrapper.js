@@ -13,11 +13,11 @@ exports.rastrearObjeto = function (code) {
                 var ret = []
                 wrapData(html, strs, ret);
                 if (!ret.length) {
-                    resolve('Product not found!')
+                    resolve({status_list:[], status_code: response.statusCode})
                 } else {
                     ret = JSON.parse(JSON.stringify(ret.reverse()))
                     ret.shift()
-                    resolve(ret)
+                    resolve({status_list:ret, status_code: response.statusCode})
                 }
             })
         } catch (error) {
