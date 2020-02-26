@@ -1,6 +1,6 @@
 {
   "name": "correios-rastreamento",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Pacote de rastreamento de objetos através de webscrap e request do novo sistema de correios https://www.linkcorreios.com.br",
   "main": "index.js",
   "scripts": {
