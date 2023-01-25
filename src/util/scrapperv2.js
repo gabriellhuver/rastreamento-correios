@@ -15,11 +15,11 @@ exports.rastrearObjeto = function (code) {
                 var ret = []
                 wrapData(html, strs, ret);
                 if (!ret.length) {
-                    resolve({status_list:[], status_code: response.statusCode})
+                    resolve({ status_list: [], status_code: response.statusCode })
                 } else {
                     ret = JSON.parse(JSON.stringify(ret.reverse()))
                     ret.shift()
-                    resolve({status_list:ret, status_code: response.statusCode})
+                    resolve({ status_list: ret, status_code: response.statusCode })
                 }
             })
         } catch (error) {
@@ -43,13 +43,48 @@ function wrapData(html, strs, ret) {
             if (text && text.includes('Destino')) { destino = text }
         })
         ret.push({
-            status: status ? status : undefined,
-            data: data ? data : undefined,
-            local: local ? local : undefined,
-            origem: origem ? origem : undefined,
-            destino: destino ? destino : undefined
+            status: extractStatus(status),
+            data: extractData(data),
+            local: extractLocal(local),
+            origem: extractOrigem(origem),
+            destino: extractDestino(destino)
         })
     });
 
 
 }
+function extractDestino(destino) {
+    const _destino = destino ? destino : undefined;
+    if (!_destino) return undefined;
+    return _destino.replace('Destino: ', '');
+}
+
+function extractOrigem(origem) {
+    const _origem = origem ? origem : undefined;
+    if (!_origem) return undefined;
+    return _origem.replace('Origem: ', '');
+}
+
+function extractLocal(local) {
+    const _local = local ? local : undefined;
+    if (!_local) return undefined;
+    return _local.replace('Local: ', '');
+}
+
+function extractData(data) {
+    const _data = data ? data : undefined;
+    let date = _data.match(/\d{2}\/\d{2}\/\d{4}/);
+    let time = _data.match(/\d{2}:\d{2}/);
+
+    let [day, month, year] = date[0].split("/");
+    let [hours, minutes] = time[0].split(":");
+
+    return new Date(year, month - 1, day, hours, minutes);
+}
+
+function extractStatus(status) {
+    const _status = status ? status : undefined;
+    if (!_status) return undefined;
+    return _status.replace('Status: ', '');
+}
+

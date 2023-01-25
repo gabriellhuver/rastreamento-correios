@@ -17,8 +17,33 @@ O modulo faz uma simples requisição no novo sistema do [Correios](https://www.
 		$ npm install correios-rastreamento --save
 ```
 
+## Rastreando objetos Versão 2
 
-## Rastreando objetos
+A versão 2 foi melhorada a extração dos dados, a data é extraida em formato Date() sem o timezone
+
+```js
+const correios = require('correios-rastreamento')
+
+correios.sroV2.rastrearObjeto('PU9999999BR').then(function(res){
+    console.log(res)
+})
+
+```
+Response Example
+```
+{ status_list:
+   [  {
+          status: 'Objeto em trânsito - por favor aguarde',
+          data: '2023-01-25T15:21:00.000Z',
+          origem: 'Unidade de Distribuição - Fortaleza / CE',
+          destino: 'Unidade de Distribuição - Fortaleza / CE'
+        },
+  status_code: 200 }
+```
+
+
+
+## Rastreando objetos Versão 1
 
 Rastreando um objeto
 
@@ -39,6 +64,7 @@ Response Example
        local: 'Local: SUECIA -  / ' },
   status_code: 200 }
 ```
+
 
 ## Built With
 
