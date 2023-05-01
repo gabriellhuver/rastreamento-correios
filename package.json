@@ -24,7 +24,7 @@
     "url": "https://github.com/gabriellhuver/rastreamento-correios"
   },
   "devDependencies": {
-    "jest": "^25.1.0",
+    "jest": "^29.5.0",
     "tape": "^4.11.0"
   }
 }
